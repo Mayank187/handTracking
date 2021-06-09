@@ -19,9 +19,9 @@ c_thumb = 0
 while 1:
     success, img = cap.read()
 
-    img = detector.findHands(img)
+    img = detector.findHands(img,draw=False)
 
-    lmList = detector.findPosition(img)
+    lmList = detector.findPosition(img, draw=False)
     if len(lmList) != 0:
 
         p_thumb = p_thumb if p_thumb != 0 else lmList[4][1]
